@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "rules": [
+    {
+      "id": "demo_well_septic",
+      "title": "Учебное расстояние колодец — септик",
+      "types_a": [
+        "well"
+      ],
+      "types_b": [
+        "septic"
+      ],
+      "parameter": "distance",
+      "operator": ">=",
+      "value": 12.0,
+      "unit": "m",
+      "scope": "any",
+      "conditions": [],
+      "exceptions": [],
+      "conditions_text": "",
+      "exceptions_text": "",
+      "unresolved": [],
+      "original_fragment": "СИНТЕТИЧЕСКИЙ ПРИМЕР: расстояние между колодцем и септиком должно быть не менее 12 м.",
+      "source": {
+        "kind": "educational",
+        "title": "Синтетический учебный текст Е61",
+        "edition": "учебная версия 1",
+        "clause": "demo_well_septic",
+        "url": "",
+        "verified": false
+      },
+      "status": "confirmed",
+      "enabled": true
+    },
+    {
+      "id": "demo_wood_buildings",
+      "title": "Учебное правило для деревянных построек",
+      "types_a": [
+        "house"
+      ],
+      "types_b": [
+        "bathhouse"
+      ],
+      "parameter": "distance",
+      "operator": ">=",
+      "value": 6.0,
+      "unit": "m",
+      "scope": "any",
+      "conditions": [
+        {
+          "target": "a",
+          "field": "material",
+          "operator": "==",
+          "value": "wood"
+        },
+        {
+          "target": "b",
+          "field": "material",
+          "operator": "==",
+          "value": "wood"
+        }
+      ],
+      "exceptions": [],
+      "conditions_text": "",
+      "exceptions_text": "",
+      "unresolved": [],
+      "original_fragment": "СИНТЕТИЧЕСКИЙ ПРИМЕР: если дом и баня деревянные, расстояние между их контурами должно быть не менее 6 м.",
+      "source": {
+        "kind": "educational",
+        "title": "Синтетический учебный текст Е61",
+        "edition": "учебная версия 1",
+        "clause": "demo_wood_buildings",
+        "url": "",
+        "verified": false
+      },
+      "status": "confirmed",
+      "enabled": true
+    },
+    {
+      "id": "demo_tree_boundary",
+      "title": "Учебный отступ высокого дерева",
+      "types_a": [
+        "tree"
+      ],
+      "types_b": [
+        "boundary"
+      ],
+      "parameter": "boundary_distance",
+      "operator": ">=",
+      "value": 2.0,
+      "unit": "m",
+      "scope": "any",
+      "conditions": [
+        {
+          "target": "a",
+          "field": "height_m",
+          "operator": ">=",
+          "value": 3
+        }
+      ],
+      "exceptions": [],
+      "conditions_text": "",
+      "exceptions_text": "",
+      "unresolved": [],
+      "original_fragment": "СИНТЕТИЧЕСКИЙ ПРИМЕР: если высота дерева не менее 3 м, отступ его условного контура от границы должен быть не менее 2 м.",
+      "source": {
+        "kind": "educational",
+        "title": "Синтетический учебный текст Е61",
+        "edition": "учебная версия 1",
+        "clause": "demo_tree_boundary",
+        "url": "",
+        "verified": false
+      },
+      "status": "confirmed",
+      "enabled": true
+    },
+    {
+      "id": "demo_cesspit_well",
+      "title": "Учебное расстояние от негерметичной ямы",
+      "types_a": [
+        "cesspit"
+      ],
+      "types_b": [
+        "well"
+      ],
+      "parameter": "distance",
+      "operator": ">=",
+      "value": 18.0,
+      "unit": "m",
+      "scope": "any",
+      "conditions": [
+        {
+          "target": "a",
+          "field": "watertight",
+          "operator": "==",
+          "value": false
+        }
+      ],
+      "exceptions": [],
+      "conditions_text": "",
+      "exceptions_text": "",
+      "unresolved": [],
+      "original_fragment": "СИНТЕТИЧЕСКИЙ ПРИМЕР: если выгребная яма негерметична, расстояние до колодца должно быть не менее 18 м.",
+      "source": {
+        "kind": "educational",
+        "title": "Синтетический учебный текст Е61",
+        "edition": "учебная версия 1",
+        "clause": "demo_cesspit_well",
+        "url": "",
+        "verified": false
+      },
+      "status": "confirmed",
+      "enabled": true
+    },
+    {
+      "id": "demo_greenhouse_boundary",
+      "title": "Учебный отступ теплицы",
+      "types_a": [
+        "greenhouse"
+      ],
+      "types_b": [
+        "boundary"
+      ],
+      "parameter": "boundary_distance",
+      "operator": ">=",
+      "value": 1.0,
+      "unit": "m",
+      "scope": "any",
+      "conditions": [],
+      "exceptions": [],
+      "conditions_text": "",
+      "exceptions_text": "",
+      "unresolved": [],
+      "original_fragment": "СИНТЕТИЧЕСКИЙ ПРИМЕР: расстояние от теплицы до границы должно быть не менее 1 м.",
+      "source": {
+        "kind": "educational",
+        "title": "Синтетический учебный текст Е61",
+        "edition": "учебная версия 1",
+        "clause": "demo_greenhouse_boundary",
+        "url": "",
+        "verified": false
+      },
+      "status": "confirmed",
+      "enabled": true
+    },
+    {
+      "id": "demo_house_boundary",
+      "title": "Учебный отступ дома",
+      "types_a": [
+        "house"
+      ],
+      "types_b": [
+        "boundary"
+      ],
+      "parameter": "boundary_distance",
+      "operator": ">=",
+      "value": 3.0,
+      "unit": "m",
+      "scope": "any",
+      "conditions": [],
+      "exceptions": [],
+      "conditions_text": "",
+      "exceptions_text": "",
+      "unresolved": [],
+      "original_fragment": "СИНТЕТИЧЕСКИЙ ПРИМЕР: расстояние от контура дома до границы его участка должно быть не менее 3 м.",
+      "source": {
+        "kind": "educational",
+        "title": "Синтетический учебный текст Е61",
+        "edition": "учебная версия 1",
+        "clause": "demo_house_boundary",
+        "url": "",
+        "verified": false
+      },
+      "status": "confirmed",
+      "enabled": true
+    }
+  ]
+}

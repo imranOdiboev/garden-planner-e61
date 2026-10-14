@@ -1,0 +1,335 @@
+{
+  "schema_version": 1,
+  "name": "Учебный сад • 30 × 40 м",
+  "parcels": [
+    {
+      "id": "own",
+      "name": "Мой участок",
+      "role": "own",
+      "vertices": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 30,
+          "y": 0
+        },
+        {
+          "x": 30,
+          "y": 40
+        },
+        {
+          "x": 0,
+          "y": 40
+        }
+      ]
+    },
+    {
+      "id": "left",
+      "name": "Соседний участок слева",
+      "role": "neighbor",
+      "vertices": [
+        {
+          "x": -20,
+          "y": 0
+        },
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 0,
+          "y": 40
+        },
+        {
+          "x": -20,
+          "y": 40
+        }
+      ]
+    },
+    {
+      "id": "right",
+      "name": "Соседний участок справа",
+      "role": "neighbor",
+      "vertices": [
+        {
+          "x": 30,
+          "y": 0
+        },
+        {
+          "x": 50,
+          "y": 0
+        },
+        {
+          "x": 50,
+          "y": 40
+        },
+        {
+          "x": 30,
+          "y": 40
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "home",
+      "type": "house",
+      "name": "Дом",
+      "parcel_id": "own",
+      "x": 12,
+      "y": 12,
+      "width": 10,
+      "height": 8,
+      "angle": 0,
+      "attributes": {
+        "material": "wood",
+        "height_m": 6
+      }
+    },
+    {
+      "id": "garage",
+      "type": "garage",
+      "name": "Гараж",
+      "parcel_id": "own",
+      "x": 23,
+      "y": 6,
+      "width": 6,
+      "height": 5,
+      "angle": 0,
+      "attributes": {
+        "material": "stone",
+        "height_m": 3
+      }
+    },
+    {
+      "id": "bath",
+      "type": "bathhouse",
+      "name": "Баня",
+      "parcel_id": "own",
+      "x": 5,
+      "y": 27,
+      "width": 5,
+      "height": 4,
+      "angle": 0,
+      "attributes": {
+        "material": null,
+        "height_m": 3
+      }
+    },
+    {
+      "id": "shed",
+      "type": "outbuilding",
+      "name": "Сарай",
+      "parcel_id": "own",
+      "x": 3,
+      "y": 12,
+      "width": 3,
+      "height": 4,
+      "angle": 0,
+      "attributes": {
+        "material": "wood"
+      }
+    },
+    {
+      "id": "septic",
+      "type": "septic",
+      "name": "Септик",
+      "parcel_id": "own",
+      "x": 23,
+      "y": 32,
+      "width": 3,
+      "height": 2,
+      "angle": 0,
+      "attributes": {
+        "watertight": true
+      }
+    },
+    {
+      "id": "well",
+      "type": "well",
+      "name": "Колодец",
+      "parcel_id": "own",
+      "x": 10,
+      "y": 34,
+      "width": 1.4,
+      "height": 1.4,
+      "angle": 0,
+      "attributes": {}
+    },
+    {
+      "id": "bed",
+      "type": "bed",
+      "name": "Грядка",
+      "parcel_id": "own",
+      "x": 14,
+      "y": 24,
+      "width": 6,
+      "height": 1.8,
+      "angle": -15,
+      "attributes": {}
+    },
+    {
+      "id": "greenhouse",
+      "type": "greenhouse",
+      "name": "Теплица",
+      "parcel_id": "own",
+      "x": 24,
+      "y": 23,
+      "width": 5,
+      "height": 3,
+      "angle": 0,
+      "attributes": {}
+    },
+    {
+      "id": "shrub",
+      "type": "shrub",
+      "name": "Смородина",
+      "parcel_id": "own",
+      "x": 3,
+      "y": 5,
+      "width": 1.6,
+      "height": 1.6,
+      "angle": 0,
+      "attributes": {
+        "height_m": 1.5
+      }
+    },
+    {
+      "id": "tree",
+      "type": "tree",
+      "name": "Яблоня",
+      "parcel_id": "own",
+      "x": 3,
+      "y": 35,
+      "width": 4,
+      "height": 4,
+      "angle": 0,
+      "attributes": {
+        "height_m": 5.2,
+        "tree_class": "tall"
+      }
+    },
+    {
+      "id": "neighbor_home",
+      "type": "house",
+      "name": "Дом соседа",
+      "parcel_id": "right",
+      "x": 39,
+      "y": 18,
+      "width": 10,
+      "height": 8,
+      "angle": 10,
+      "attributes": {
+        "material": "stone"
+      }
+    },
+    {
+      "id": "neighbor_pit",
+      "type": "cesspit",
+      "name": "Яма соседа",
+      "parcel_id": "left",
+      "x": -12,
+      "y": 32,
+      "width": 2,
+      "height": 2,
+      "angle": 0,
+      "attributes": {
+        "watertight": null
+      }
+    }
+  ],
+  "utilities": [
+    {
+      "id": "line_electricity",
+      "name": "Электричество",
+      "type": "electricity",
+      "parcel_id": "own",
+      "points": [
+        {
+          "x": 12,
+          "y": -4
+        },
+        {
+          "x": 12,
+          "y": 2
+        },
+        {
+          "x": 12,
+          "y": 8
+        }
+      ]
+    },
+    {
+      "id": "line_gas",
+      "name": "Газ",
+      "type": "gas",
+      "parcel_id": "own",
+      "points": [
+        {
+          "x": 32,
+          "y": 2
+        },
+        {
+          "x": 18,
+          "y": 2
+        },
+        {
+          "x": 18,
+          "y": 10
+        }
+      ]
+    },
+    {
+      "id": "line_sewer",
+      "name": "Канализация",
+      "type": "sewer",
+      "parcel_id": "own",
+      "points": [
+        {
+          "x": 17,
+          "y": 14
+        },
+        {
+          "x": 23,
+          "y": 14
+        },
+        {
+          "x": 23,
+          "y": 32
+        }
+      ]
+    },
+    {
+      "id": "line_water",
+      "name": "Водоснабжение",
+      "type": "water",
+      "parcel_id": "own",
+      "points": [
+        {
+          "x": 10,
+          "y": 34
+        },
+        {
+          "x": 10,
+          "y": 28
+        },
+        {
+          "x": 8,
+          "y": 28
+        },
+        {
+          "x": 8,
+          "y": 16
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "grid_step": 1,
+    "snap": true,
+    "show_neighbors": true,
+    "show_labels": true
+  }
+}

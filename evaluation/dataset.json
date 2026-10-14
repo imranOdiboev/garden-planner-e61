@@ -1,0 +1,644 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "description": "10 синтетических текстов. Числа вымышлены для проверки метода; это НЕ строительные нормы.",
+  "cases": [
+    {
+      "id": "T01",
+      "synthetic": true,
+      "text": "Учебный текст. Расстояние между домом и гаражом должно быть не менее 4 м. Цвет забора выбирает владелец.",
+      "source": {
+        "kind": "educational",
+        "title": "Синтетический учебный текст Е61",
+        "edition": "учебная версия 1",
+        "clause": "T01",
+        "url": "",
+        "verified": false
+      },
+      "expected_rules": [
+        {
+          "id": "t01_r1",
+          "title": "Дом и гараж",
+          "types_a": [
+            "house"
+          ],
+          "types_b": [
+            "garage"
+          ],
+          "parameter": "distance",
+          "operator": ">=",
+          "value": 4,
+          "unit": "m",
+          "scope": "any",
+          "conditions": [],
+          "exceptions": [],
+          "conditions_text": "",
+          "exceptions_text": "",
+          "unresolved": [],
+          "original_fragment": "Расстояние между домом и гаражом должно быть не менее 4 м.",
+          "source": {
+            "kind": "educational",
+            "title": "Синтетический учебный текст Е61",
+            "edition": "учебная версия 1",
+            "clause": "t01_r1",
+            "url": "",
+            "verified": false
+          },
+          "status": "draft",
+          "enabled": false
+        }
+      ],
+      "expected_relations": [],
+      "irrelevant_fragments": [
+        "Цвет забора выбирает владелец."
+      ]
+    },
+    {
+      "id": "T02",
+      "synthetic": true,
+      "text": "Если дом деревянный, расстояние до бани должно быть не менее 6 м. Это требование не применяется, если баня каменная.",
+      "source": {
+        "kind": "educational",
+        "title": "Синтетический учебный текст Е61",
+        "edition": "учебная версия 1",
+        "clause": "T02",
+        "url": "",
+        "verified": false
+      },
+      "expected_rules": [
+        {
+          "id": "t02_r1",
+          "title": "Деревянный дом",
+          "types_a": [
+            "house"
+          ],
+          "types_b": [
+            "bathhouse"
+          ],
+          "parameter": "distance",
+          "operator": ">=",
+          "value": 6,
+          "unit": "m",
+          "scope": "any",
+          "conditions": [
+            {
+              "target": "a",
+              "field": "material",
+              "operator": "==",
+              "value": "wood"
+            }
+          ],
+          "exceptions": [
+            {
+              "target": "b",
+              "field": "material",
+              "operator": "==",
+              "value": "stone"
+            }
+          ],
+          "conditions_text": "",
+          "exceptions_text": "",
+          "unresolved": [],
+          "original_fragment": "Если дом деревянный, расстояние до бани должно быть не менее 6 м. Это требование не применяется, если баня каменная.",
+          "source": {
+            "kind": "educational",
+            "title": "Синтетический учебный текст Е61",
+            "edition": "учебная версия 1",
+            "clause": "t02_r1",
+            "url": "",
+            "verified": false
+          },
+          "status": "draft",
+          "enabled": false
+        }
+      ],
+      "expected_relations": [],
+      "irrelevant_fragments": []
+    },
+    {
+      "id": "T03",
+      "synthetic": true,
+      "text": "Расстояние между колодцем и септиком должно быть не менее 10 м. Расстояние от септика до колодца должно составлять минимум 1000 см.",
+      "source": {
+        "kind": "educational",
+        "title": "Синтетический учебный текст Е61",
+        "edition": "учебная версия 1",
+        "clause": "T03",
+        "url": "",
+        "verified": false
+      },
+      "expected_rules": [
+        {
+          "id": "t03_r1",
+          "title": "Колодец",
+          "types_a": [
+            "well"
+          ],
+          "types_b": [
+            "septic"
+          ],
+          "parameter": "distance",
+          "operator": ">=",
+          "value": 10,
+          "unit": "m",
+          "scope": "any",
+          "conditions": [],
+          "exceptions": [],
+          "conditions_text": "",
+          "exceptions_text": "",
+          "unresolved": [],
+          "original_fragment": "Расстояние между колодцем и септиком должно быть не менее 10 м.",
+          "source": {
+            "kind": "educational",
+            "title": "Синтетический учебный текст Е61",
+            "edition": "учебная версия 1",
+            "clause": "t03_r1",
+            "url": "",
+            "verified": false
+          },
+          "status": "draft",
+          "enabled": false
+        },
+        {
+          "id": "t03_r2",
+          "title": "Септик",
+          "types_a": [
+            "septic"
+          ],
+          "types_b": [
+            "well"
+          ],
+          "parameter": "distance",
+          "operator": ">=",
+          "value": 1000,
+          "unit": "cm",
+          "scope": "any",
+          "conditions": [],
+          "exceptions": [],
+          "conditions_text": "",
+          "exceptions_text": "",
+          "unresolved": [],
+          "original_fragment": "Расстояние от септика до колодца должно составлять минимум 1000 см.",
+          "source": {
+            "kind": "educational",
+            "title": "Синтетический учебный текст Е61",
+            "edition": "учебная версия 1",
+            "clause": "t03_r2",
+            "url": "",
+            "verified": false
+          },
+          "status": "draft",
+          "enabled": false
+        }
+      ],
+      "expected_relations": [
+        {
+          "a": "t03_r1",
+          "b": "t03_r2",
+          "kind": "duplicate"
+        }
+      ],
+      "irrelevant_fragments": []
+    },
+    {
+      "id": "T04",
+      "synthetic": true,
+      "text": "Расстояние между домом и баней должно быть не менее 8 м. Расстояние между домом и баней должно быть не более 5 м.",
+      "source": {
+        "kind": "educational",
+        "title": "Синтетический учебный текст Е61",
+        "edition": "учебная версия 1",
+        "clause": "T04",
+        "url": "",
+        "verified": false
+      },
+      "expected_rules": [
+        {
+          "id": "t04_r1",
+          "title": "Минимум",
+          "types_a": [
+            "house"
+          ],
+          "types_b": [
+            "bathhouse"
+          ],
+          "parameter": "distance",
+          "operator": ">=",
+          "value": 8,
+          "unit": "m",
+          "scope": "any",
+          "conditions": [],
+          "exceptions": [],
+          "conditions_text": "",
+          "exceptions_text": "",
+          "unresolved": [],
+          "original_fragment": "Расстояние между домом и баней должно быть не менее 8 м.",
+          "source": {
+            "kind": "educational",
+            "title": "Синтетический учебный текст Е61",
+            "edition": "учебная версия 1",
+            "clause": "t04_r1",
+            "url": "",
+            "verified": false
+          },
+          "status": "draft",
+          "enabled": false
+        },
+        {
+          "id": "t04_r2",
+          "title": "Максимум",
+          "types_a": [
+            "house"
+          ],
+          "types_b": [
+            "bathhouse"
+          ],
+          "parameter": "distance",
+          "operator": "<=",
+          "value": 5,
+          "unit": "m",
+          "scope": "any",
+          "conditions": [],
+          "exceptions": [],
+          "conditions_text": "",
+          "exceptions_text": "",
+          "unresolved": [],
+          "original_fragment": "Расстояние между домом и баней должно быть не более 5 м.",
+          "source": {
+            "kind": "educational",
+            "title": "Синтетический учебный текст Е61",
+            "edition": "учебная версия 1",
+            "clause": "t04_r2",
+            "url": "",
+            "verified": false
+          },
+          "status": "draft",
+          "enabled": false
+        }
+      ],
+      "expected_relations": [
+        {
+          "a": "t04_r1",
+          "b": "t04_r2",
+          "kind": "conflict"
+        }
+      ],
+      "irrelevant_fragments": []
+    },
+    {
+      "id": "T05",
+      "synthetic": true,
+      "text": "Если дом деревянный, расстояние до гаража должно быть не менее 6 м. Если дом каменный, расстояние до гаража должно быть не менее 3 м.",
+      "source": {
+        "kind": "educational",
+        "title": "Синтетический учебный текст Е61",
+        "edition": "учебная версия 1",
+        "clause": "T05",
+        "url": "",
+        "verified": false
+      },
+      "expected_rules": [
+        {
+          "id": "t05_r1",
+          "title": "Дерево",
+          "types_a": [
+            "house"
+          ],
+          "types_b": [
+            "garage"
+          ],
+          "parameter": "distance",
+          "operator": ">=",
+          "value": 6,
+          "unit": "m",
+          "scope": "any",
+          "conditions": [
+            {
+              "target": "a",
+              "field": "material",
+              "operator": "==",
+              "value": "wood"
+            }
+          ],
+          "exceptions": [],
+          "conditions_text": "",
+          "exceptions_text": "",
+          "unresolved": [],
+          "original_fragment": "Если дом деревянный, расстояние до гаража должно быть не менее 6 м.",
+          "source": {
+            "kind": "educational",
+            "title": "Синтетический учебный текст Е61",
+            "edition": "учебная версия 1",
+            "clause": "t05_r1",
+            "url": "",
+            "verified": false
+          },
+          "status": "draft",
+          "enabled": false
+        },
+        {
+          "id": "t05_r2",
+          "title": "Камень",
+          "types_a": [
+            "house"
+          ],
+          "types_b": [
+            "garage"
+          ],
+          "parameter": "distance",
+          "operator": ">=",
+          "value": 3,
+          "unit": "m",
+          "scope": "any",
+          "conditions": [
+            {
+              "target": "a",
+              "field": "material",
+              "operator": "==",
+              "value": "stone"
+            }
+          ],
+          "exceptions": [],
+          "conditions_text": "",
+          "exceptions_text": "",
+          "unresolved": [],
+          "original_fragment": "Если дом каменный, расстояние до гаража должно быть не менее 3 м.",
+          "source": {
+            "kind": "educational",
+            "title": "Синтетический учебный текст Е61",
+            "edition": "учебная версия 1",
+            "clause": "t05_r2",
+            "url": "",
+            "verified": false
+          },
+          "status": "draft",
+          "enabled": false
+        }
+      ],
+      "expected_relations": [],
+      "irrelevant_fragments": []
+    },
+    {
+      "id": "T06",
+      "synthetic": true,
+      "text": "Расстояние между теплицей и домом должно быть не менее 2 м. Расстояние между теплицей и домом должно быть не менее 4 м.",
+      "source": {
+        "kind": "educational",
+        "title": "Синтетический учебный текст Е61",
+        "edition": "учебная версия 1",
+        "clause": "T06",
+        "url": "",
+        "verified": false
+      },
+      "expected_rules": [
+        {
+          "id": "t06_r1",
+          "title": "Два",
+          "types_a": [
+            "greenhouse"
+          ],
+          "types_b": [
+            "house"
+          ],
+          "parameter": "distance",
+          "operator": ">=",
+          "value": 2,
+          "unit": "m",
+          "scope": "any",
+          "conditions": [],
+          "exceptions": [],
+          "conditions_text": "",
+          "exceptions_text": "",
+          "unresolved": [],
+          "original_fragment": "Расстояние между теплицей и домом должно быть не менее 2 м.",
+          "source": {
+            "kind": "educational",
+            "title": "Синтетический учебный текст Е61",
+            "edition": "учебная версия 1",
+            "clause": "t06_r1",
+            "url": "",
+            "verified": false
+          },
+          "status": "draft",
+          "enabled": false
+        },
+        {
+          "id": "t06_r2",
+          "title": "Четыре",
+          "types_a": [
+            "greenhouse"
+          ],
+          "types_b": [
+            "house"
+          ],
+          "parameter": "distance",
+          "operator": ">=",
+          "value": 4,
+          "unit": "m",
+          "scope": "any",
+          "conditions": [],
+          "exceptions": [],
+          "conditions_text": "",
+          "exceptions_text": "",
+          "unresolved": [],
+          "original_fragment": "Расстояние между теплицей и домом должно быть не менее 4 м.",
+          "source": {
+            "kind": "educational",
+            "title": "Синтетический учебный текст Е61",
+            "edition": "учебная версия 1",
+            "clause": "t06_r2",
+            "url": "",
+            "verified": false
+          },
+          "status": "draft",
+          "enabled": false
+        }
+      ],
+      "expected_relations": [
+        {
+          "a": "t06_r1",
+          "b": "t06_r2",
+          "kind": "compatible"
+        }
+      ],
+      "irrelevant_fragments": []
+    },
+    {
+      "id": "T07",
+      "synthetic": true,
+      "text": "Если дерево выше 4 м, расстояние от его контура до границы участка должно быть не менее 2 м.",
+      "source": {
+        "kind": "educational",
+        "title": "Синтетический учебный текст Е61",
+        "edition": "учебная версия 1",
+        "clause": "T07",
+        "url": "",
+        "verified": false
+      },
+      "expected_rules": [
+        {
+          "id": "t07_r1",
+          "title": "Дерево",
+          "types_a": [
+            "tree"
+          ],
+          "types_b": [
+            "boundary"
+          ],
+          "parameter": "boundary_distance",
+          "operator": ">=",
+          "value": 2,
+          "unit": "m",
+          "scope": "any",
+          "conditions": [
+            {
+              "target": "a",
+              "field": "height_m",
+              "operator": ">",
+              "value": 4
+            }
+          ],
+          "exceptions": [],
+          "conditions_text": "",
+          "exceptions_text": "",
+          "unresolved": [],
+          "original_fragment": "Если дерево выше 4 м, расстояние от его контура до границы участка должно быть не менее 2 м.",
+          "source": {
+            "kind": "educational",
+            "title": "Синтетический учебный текст Е61",
+            "edition": "учебная версия 1",
+            "clause": "t07_r1",
+            "url": "",
+            "verified": false
+          },
+          "status": "draft",
+          "enabled": false
+        }
+      ],
+      "expected_relations": [],
+      "irrelevant_fragments": []
+    },
+    {
+      "id": "T08",
+      "synthetic": true,
+      "text": "Осенью листья желтеют. Владельцы любят отдыхать в саду. В тексте нет требований к размещению.",
+      "source": {
+        "kind": "educational",
+        "title": "Синтетический учебный текст Е61",
+        "edition": "учебная версия 1",
+        "clause": "T08",
+        "url": "",
+        "verified": false
+      },
+      "expected_rules": [],
+      "expected_relations": [],
+      "irrelevant_fragments": [
+        "Осенью листья желтеют.",
+        "Владельцы любят отдыхать в саду."
+      ]
+    },
+    {
+      "id": "T09",
+      "synthetic": true,
+      "text": "Если выгребная яма негерметична, расстояние до колодца должно быть не менее 15 м.",
+      "source": {
+        "kind": "educational",
+        "title": "Синтетический учебный текст Е61",
+        "edition": "учебная версия 1",
+        "clause": "T09",
+        "url": "",
+        "verified": false
+      },
+      "expected_rules": [
+        {
+          "id": "t09_r1",
+          "title": "Яма",
+          "types_a": [
+            "cesspit"
+          ],
+          "types_b": [
+            "well"
+          ],
+          "parameter": "distance",
+          "operator": ">=",
+          "value": 15,
+          "unit": "m",
+          "scope": "any",
+          "conditions": [
+            {
+              "target": "a",
+              "field": "watertight",
+              "operator": "==",
+              "value": false
+            }
+          ],
+          "exceptions": [],
+          "conditions_text": "",
+          "exceptions_text": "",
+          "unresolved": [],
+          "original_fragment": "Если выгребная яма негерметична, расстояние до колодца должно быть не менее 15 м.",
+          "source": {
+            "kind": "educational",
+            "title": "Синтетический учебный текст Е61",
+            "edition": "учебная версия 1",
+            "clause": "t09_r1",
+            "url": "",
+            "verified": false
+          },
+          "status": "draft",
+          "enabled": false
+        }
+      ],
+      "expected_relations": [],
+      "irrelevant_fragments": []
+    },
+    {
+      "id": "T10",
+      "synthetic": true,
+      "text": "Запрещается размещать гараж ближе 2 м к границе участка.",
+      "source": {
+        "kind": "educational",
+        "title": "Синтетический учебный текст Е61",
+        "edition": "учебная версия 1",
+        "clause": "T10",
+        "url": "",
+        "verified": false
+      },
+      "expected_rules": [
+        {
+          "id": "t10_r1",
+          "title": "Запрет",
+          "types_a": [
+            "garage"
+          ],
+          "types_b": [
+            "boundary"
+          ],
+          "parameter": "boundary_distance",
+          "operator": ">=",
+          "value": 2,
+          "unit": "m",
+          "scope": "any",
+          "conditions": [],
+          "exceptions": [],
+          "conditions_text": "",
+          "exceptions_text": "",
+          "unresolved": [],
+          "original_fragment": "Запрещается размещать гараж ближе 2 м к границе участка.",
+          "source": {
+            "kind": "educational",
+            "title": "Синтетический учебный текст Е61",
+            "edition": "учебная версия 1",
+            "clause": "t10_r1",
+            "url": "",
+            "verified": false
+          },
+          "status": "draft",
+          "enabled": false
+        }
+      ],
+      "expected_relations": [],
+      "irrelevant_fragments": []
+    }
+  ]
+}

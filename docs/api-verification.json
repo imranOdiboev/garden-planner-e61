@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "checks": [
+    "health",
+    "JSON round trip over HTTP",
+    "invalid size rejected",
+    "foreign origin rejected",
+    "object to boundary = 7 m",
+    "three check statuses",
+    "Ollama status read",
+    "offline model returns honest 503"
+  ],
+  "example_counts": {
+    "violation": 2,
+    "complies": 15,
+    "insufficient_data": 2
+  },
+  "ollama": {
+    "available": false,
+    "server_available": false,
+    "models": [],
+    "selected": null,
+    "message": "Нейросетевое извлечение недоступно: Ollama не отвечает или истёк тайм-аут. Планировщик продолжает работать. Запустите Ollama и установите выбранную модель."
+  }
+}
